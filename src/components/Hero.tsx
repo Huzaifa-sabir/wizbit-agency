@@ -12,7 +12,7 @@ const FRAME_COUNT = 40;
 const FRAME_START = 1;
 
 function currentFrame(index: number, isMobile: boolean) {
-  const folder = isMobile ? "frames-mobile-v2" : "frames";
+  const folder = isMobile ? "frames-mobile" : "frames";
   return `/Assets/${folder}/ezgif-frame-${index.toString().padStart(3, "0")}.png`;
 }
 
@@ -63,22 +63,10 @@ export default function Hero() {
       context.clearRect(0, 0, canvas.width, canvas.height);
       const img = images[imageSeq.frame];
       
-      const isMobile = canvas.width === 1080;
-      let scale;
-      let x, y;
-
-      if (isMobile) {
-        // Mobile frames are now natively 1080x1920, so cover math works perfectly.
-        scale = Math.max(canvas.width / img.width, canvas.height / img.height);
-        x = (canvas.width / 2) - (img.width / 2) * scale;
-        // Shift it downwards so it sits below the text (15% down)
-        y = (canvas.height / 2) - (img.height / 2) * scale + (canvas.height * 0.15);
-      } else {
-        // Desktop: Cover the screen
-        scale = Math.max(canvas.width / img.width, canvas.height / img.height);
-        x = (canvas.width / 2) - (img.width / 2) * scale;
-        y = (canvas.height / 2) - (img.height / 2) * scale;
-      }
+      // Since the user generated perfect vertical frames, we can use exact cover math!
+      const scale = Math.max(canvas.width / img.width, canvas.height / img.height);
+      const x = (canvas.width / 2) - (img.width / 2) * scale;
+      const y = (canvas.height / 2) - (img.height / 2) * scale;
       
       context.drawImage(img, x, y, img.width * scale, img.height * scale);
     }
