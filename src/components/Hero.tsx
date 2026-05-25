@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import clsx from "clsx";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -169,9 +170,9 @@ export default function Hero() {
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.7 }}
               className="mt-10 md:mt-16 flex items-center gap-4 md:gap-6"
             >
-              <button className="px-6 py-3 md:px-8 md:py-4 bg-brand-light text-brand-dark rounded-full font-semibold tracking-wide hover:scale-105 transition-transform duration-300 shadow-[0_0_40px_-10px_rgba(157,78,221,0.5)] text-sm md:text-base">
+              <Link href="/services" className="px-6 py-3 md:px-8 md:py-4 bg-brand-light text-brand-dark rounded-full font-semibold tracking-wide hover:scale-105 transition-transform duration-300 shadow-[0_0_40px_-10px_rgba(157,78,221,0.5)] text-sm md:text-base">
                 Explore Reality
-              </button>
+              </Link>
               <div className="flex flex-col gap-1 items-center justify-center opacity-40">
                 <div className="w-[1px] h-8 md:h-12 bg-gradient-to-b from-brand-light to-transparent animate-pulse" />
                 <span className="text-[10px] md:text-xs uppercase tracking-[0.2em] font-semibold">Scroll</span>

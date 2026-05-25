@@ -33,12 +33,12 @@ export default function TechStackSection() {
         
         {/* Left: Text Content */}
         <div className="w-full lg:w-1/3">
-          <h2 className="text-sm uppercase tracking-[0.3em] text-brand-purple mb-4 font-semibold">
+          <p className="text-sm uppercase tracking-[0.3em] text-brand-purple mb-4 font-semibold">
             Integrations
-          </h2>
-          <h3 className="text-4xl md:text-5xl font-bold text-brand-light leading-tight mb-6">
+          </p>
+          <h2 className="text-4xl md:text-5xl font-bold text-brand-light leading-tight mb-6">
             We Connect <br /> The Dots.
-          </h3>
+          </h2>
           <p className="text-brand-light/60 text-lg leading-relaxed">
             Our automation solutions don't live in a vacuum. We seamlessly interface with your existing enterprise architecture, ensuring data flows continuously and securely across all platforms.
           </p>
@@ -59,7 +59,7 @@ export default function TechStackSection() {
                 {stack.icon}
               </div>
               <div>
-                <h4 className="text-xl font-bold text-brand-light mb-2">{stack.title}</h4>
+                <h3 className="text-xl font-bold text-brand-light mb-2">{stack.title}</h3>
                 <p className="text-sm text-brand-light/40 font-mono tracking-wide">
                   {stack.items}
                 </p>

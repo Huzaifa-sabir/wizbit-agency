@@ -26,12 +26,12 @@ export default function ProcessSection() {
     <section className="w-full bg-brand-dark py-24 md:py-32 px-6 md:px-16 relative">
       <div className="max-w-4xl mx-auto w-full">
         <div className="mb-16 md:mb-24 text-center">
-          <h2 className="text-sm uppercase tracking-[0.3em] text-brand-purple mb-4 font-semibold">
+          <p className="text-sm uppercase tracking-[0.3em] text-brand-purple mb-4 font-semibold">
             How We Work
-          </h2>
-          <h3 className="text-4xl md:text-6xl font-bold text-brand-light">
+          </p>
+          <h2 className="text-4xl md:text-6xl font-bold text-brand-light">
             The Automation Pipeline
-          </h3>
+          </h2>
         </div>
 
         <div className="relative">
@@ -57,9 +57,9 @@ export default function ProcessSection() {
 
                 {/* Content Card */}
                 <div className="flex-1 pt-1 md:pt-2">
-                  <h4 className="text-2xl md:text-3xl font-bold text-brand-light mb-4 group-hover:text-brand-purple transition-colors duration-500">
+                  <h3 className="text-2xl md:text-3xl font-bold text-brand-light mb-4 group-hover:text-brand-purple transition-colors duration-500">
                     {step.title}
-                  </h4>
+                  </h3>
                   <p className="text-brand-light/60 text-base md:text-lg leading-relaxed max-w-2xl">
                     {step.description}
                   </p>
