@@ -13,6 +13,8 @@ export const metadata: Metadata = {
   description: "Wizbit creates cinematic AI-powered digital experiences, automation systems, and next-generation web products.",
 };
 
+import BottomNav from "@/components/BottomNav";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -20,9 +22,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} antialiased h-full`}>
-      <body className="min-h-full flex flex-col bg-brand-dark text-brand-light selection:bg-brand-purple selection:text-white">
+      <body className="min-h-full flex flex-col bg-brand-dark text-brand-light selection:bg-brand-purple selection:text-white pb-24 md:pb-32">
         <div className="noise-overlay" />
         {children}
+        <BottomNav />
       </body>
     </html>
   );
