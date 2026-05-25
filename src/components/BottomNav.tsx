@@ -47,18 +47,18 @@ export default function BottomNav() {
           animate={{ y: 0, opacity: 1, x: "-50%" }}
           exit={{ y: 100, opacity: 0, x: "-50%" }}
           transition={{ type: "spring", stiffness: 200, damping: 20 }}
-          className="fixed bottom-6 md:bottom-8 left-1/2 z-50 w-[90%] max-w-[400px] md:max-w-[500px]"
+          className="fixed bottom-6 md:bottom-8 left-1/2 z-50 w-[95%] sm:w-[90%] max-w-[500px]"
         >
-          <div className="flex items-center justify-between px-4 py-3 md:py-4 rounded-full border border-white/10 bg-[#030005]/60 backdrop-blur-xl shadow-[0_0_30px_rgba(157,78,221,0.15)]">
+          <div className="flex items-center justify-between px-2 py-2 md:px-4 md:py-4 rounded-full border border-white/10 bg-[#030005]/80 backdrop-blur-xl shadow-[0_0_30px_rgba(157,78,221,0.15)]">
             
-            <div className="flex items-center gap-1 md:gap-2">
+            <div className="flex items-center gap-0.5 md:gap-2">
               {navLinks.map((link) => {
                 const isActive = pathname === link.path;
                 return (
                   <Link 
                     key={link.name} 
                     href={link.path}
-                    className={`relative px-4 py-2 text-xs md:text-sm font-medium tracking-wide transition-colors duration-300 rounded-full ${
+                    className={`relative px-2.5 py-1.5 md:px-4 md:py-2 text-[10px] md:text-sm font-medium tracking-wide transition-colors duration-300 rounded-full ${
                       isActive ? "text-brand-dark bg-brand-light" : "text-brand-light/60 hover:text-brand-light hover:bg-white/5"
                     }`}
                   >
@@ -70,7 +70,7 @@ export default function BottomNav() {
 
             <Link 
               href="/contact"
-              className="ml-2 px-5 py-2 md:py-2.5 rounded-full text-xs md:text-sm font-bold bg-brand-purple text-white shadow-[0_0_15px_rgba(157,78,221,0.4)] hover:shadow-[0_0_25px_rgba(157,78,221,0.6)] hover:scale-105 transition-all duration-300"
+              className="ml-1 px-3 py-1.5 md:px-5 md:py-2.5 rounded-full text-[11px] md:text-sm font-bold bg-brand-purple text-white shadow-[0_0_15px_rgba(157,78,221,0.4)] hover:shadow-[0_0_25px_rgba(157,78,221,0.6)] hover:scale-105 transition-all duration-300 whitespace-nowrap"
             >
               Start
             </Link>
