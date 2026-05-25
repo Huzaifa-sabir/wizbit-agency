@@ -1,6 +1,9 @@
 import Hero from "@/components/Hero";
 import AboutSection from "@/components/AboutSection";
+import StatsSection from "@/components/StatsSection";
 import ServicesSection from "@/components/ServicesSection";
+import ProcessSection from "@/components/ProcessSection";
+import TechStackSection from "@/components/TechStackSection";
 import Marquee from "@/components/Marquee";
 import Footer from "@/components/Footer";
 
@@ -10,8 +13,11 @@ export default function Home() {
       <Hero />
       <div className="relative z-20 bg-brand-dark">
         <AboutSection />
-        <Marquee />
+        <StatsSection />
         <ServicesSection />
+        <ProcessSection />
+        <TechStackSection />
+        <Marquee />
         <Footer />
       </div>
     </main>
