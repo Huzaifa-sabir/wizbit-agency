@@ -49,13 +49,22 @@ export default function Hero() {
     for (let i = 0; i < FRAME_COUNT; i++) {
       const img = new Image();
       img.src = currentFrame(i + FRAME_START, isMobileInitial);
-      img.onload = () => {
+      
+      const handleLoadOrError = () => {
         loadedCount++;
-        if (loadedCount === FRAME_COUNT) {
+        // Hide spinner as soon as the first frame loads, so users don't wait for all 40
+        if (i === 0) {
           setImagesLoaded(true);
           render();
         }
+        // Fallback: If 40 frames load (or error out) and the first frame somehow failed
+        if (loadedCount === FRAME_COUNT) {
+          setImagesLoaded(true);
+        }
       };
+
+      img.onload = handleLoadOrError;
+      img.onerror = handleLoadOrError;
       images.push(img);
     }
 
