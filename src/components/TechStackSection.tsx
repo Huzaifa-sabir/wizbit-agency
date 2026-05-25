@@ -1,28 +1,28 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Database, Cloud, Box, Cpu } from "lucide-react";
+import { Database, Cloud, Package, Cpu } from "@phosphor-icons/react";
 
 const stacks = [
   {
     title: "ERP Systems",
     items: "SAP • Oracle • Microsoft Dynamics",
-    icon: <Database className="w-6 h-6" />,
+    icon: <Database weight="duotone" className="w-6 h-6" />,
   },
   {
     title: "Cloud Infrastructure",
     items: "AWS • Microsoft Azure • GCP",
-    icon: <Cloud className="w-6 h-6" />,
+    icon: <Cloud weight="duotone" className="w-6 h-6" />,
   },
   {
     title: "Logistics & WMS",
     items: "Shopify • Custom Warehouse APIs",
-    icon: <Box className="w-6 h-6" />,
+    icon: <Package weight="duotone" className="w-6 h-6" />,
   },
   {
     title: "AI & Robotics",
     items: "Computer Vision • AGV Protocols",
-    icon: <Cpu className="w-6 h-6" />,
+    icon: <Cpu weight="duotone" className="w-6 h-6" />,
   }
 ];
 
